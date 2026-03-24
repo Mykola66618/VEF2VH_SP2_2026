@@ -1,0 +1,93 @@
+.menu-checkbox {
+    display: none;
+}
+
+.menu-label {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--pico-color-orange-100);
+}
+
+.social-butts a {
+    display: inline;
+    color: var(--pico-color-orange-500);
+}
+
+.social-butts a:hover {
+    color: var(--pico-color-orange-300);
+}
+
+/* меню скрыто */
+.topmenu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 999;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--pico-color-orange-900);
+    border-bottom: 2px solid var(--pico-color-orange-600);
+}
+
+/* подчёркивание каждого раздела */
+.topmenu li {
+    border-bottom: 1px solid var(--pico-color-orange-700);
+    padding: 0.5rem 1rem;
+}
+
+.topmenu li:last-child {
+    border-bottom: none;
+}
+
+/* открыть меню */
+.menu-checkbox:checked + .menu-label + .topmenu {
+    display: flex;
+}
+
+/* ПК версия */
+@media screen and (min-width:900px) {
+
+    .menu-label {
+        display: none;
+    }
+
+    .menu ul {
+        flex-flow: row;
+        flex-grow: 1;
+    }
+
+    .topmenu {
+        display: flex !important;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    /* на ПК убираем подчёркивание между пунктами */
+    .topmenu li {
+        border-bottom: none;
+        border-left: 1px solid var(--pico-color-orange-700);
+    }
+
+    .topmenu li:first-child {
+        border-left: none;
+    }
+
+    .menu:first-child li {
+        padding-right: 3rem;
+    }
+
+    .menu:first-child strong {
+        width: 100%;
+        color: var(--pico-color-orange-500);
+    }
+}

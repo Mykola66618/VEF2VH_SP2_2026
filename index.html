@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verkefni 2</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/pico.orange.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/menues.css">
+    <link rel="stylesheet" href="css/table-from.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute("data-theme");
+            if (current === "dark") {
+                html.setAttribute("data-theme", "light");
+            } else {
+                html.setAttribute("data-theme", "dark");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="container menu">
+    <ul>
+        <li><strong>Verkafni 2</strong></li>
+    </ul>
+    <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+    <label for="menu-checkbox" class="menu-label">&#9776;</label>
+    <ul class="topmenu">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Comment</a></li>
+        <li><a href="#">Account</a></li>
+        <li>
+            <a href="#" data-target="login-modal" onclick="toggleModal(event)">Login</a>
+        </li>
+        <li class="social-butts">
+            <a href="#">&#10005;</a>
+            <a href="#">&#9990;</a>
+            <a href="#">&#9993;</a>
+            <a href="#">&#128241;</a>
+        </li>
+        <li>
+            <input type="search">
+        </li>
+        <li><button onclick="toggleTheme()">Change theme</button></li>
+    </ul>
+</nav>
+
+<!-- МОДАЛЬНОЕ ОКНО LOGIN -->
+<dialog id="login-modal">
+    <article>
+        <header>
+            <button
+                aria-label="Close"
+                rel="prev"
+                data-target="login-modal"
+                onclick="toggleModal(event)">
+            </button>
+            <h2>Login</h2>
+        </header>
+
+        <form>
+            <fieldset>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="email@example.com" required>
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="password" placeholder="Password" required>
+                </label>
+            </fieldset>
+        </form>
+
+        <footer>
+            <button
+                class="secondary"
+                data-target="login-modal"
+                onclick="toggleModal(event)">
+                Cancel
+            </button>
+            <button type="submit">Login</button>
+        </footer>
+    </article>
+</dialog>
+
+<!-- HEADER -->
+<header>
+    <picture>
+        <img src="tmb_360742_630525.jpg" alt="mynd">
+    </picture>
+</header>
+
+<!-- MAIN -->
+<main class="container col-4">
+
+    <!-- ARTICLES -->
+    <article>
+        <h3>GEGN 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+    </article>
+
+    <article>
+        <h3>GEGN 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+    </article>
+
+    <article>
+        <h3>GEGN 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+    </article>
+
+    <!-- ASIDE -->
+    <aside>
+        <ul>
+            <li><a href="#1">Tengill a 1 efni</a></li>
+            <li><a href="#2">Tengill a 2 efni</a></li>
+            <li><a href="#3">Tengill a 3 efni</a></li>
+        </ul>
+    </aside>
+
+    <!-- TABLE -->
+    <fieldset class="col-2">
+        <section>
+            <h2>Tafla</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Planet</th>
+                        <th>Diameter (km)</th>
+                        <th>Distance to Sun (AU)</th>
+                        <th>Orbit (days)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Planet">Mercury</td>
+                        <td data-label="Diameter (km)">4,880</td>
+                        <td data-label="Distance to Sun (AU)">0.39</td>
+                        <td data-label="Orbit (days)">88</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Planet">Venus</td>
+                        <td data-label="Diameter (km)">12,104</td>
+                        <td data-label="Distance to Sun (AU)">0.72</td>
+                        <td data-label="Orbit (days)">225</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Planet">Earth</td>
+                        <td data-label="Diameter (km)">12,742</td>
+                        <td data-label="Distance to Sun (AU)">1.00</td>
+                        <td data-label="Orbit (days)">365</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Planet">Mars</td>
+                        <td data-label="Diameter (km)">6,779</td>
+                        <td data-label="Distance to Sun (AU)">1.52</td>
+                        <td data-label="Orbit (days)">687</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Average</th>
+                        <th>9,126</th>
+                        <th>0.91</th>
+                        <th>341</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </fieldset>
+
+    <!-- FORM -->
+    <form class="col-2">
+        <fieldset>
+            <section>
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="lastname" placeholder="Lastname">
+            </section>
+
+            <section>
+                Tolvupost
+                <input type="email" name="email" placeholder="Email" required>
+            </section>
+
+            <section>
+                <label>
+                    Siminumer
+                    <input type="number" name="number" placeholder="Telephone - 7 digits only" required>
+                </label>
+            </section>
+
+            <section>
+                <h1>Time</h1>
+                <input type="date">
+                <input type="datetime-local">
+                <input type="month">
+                <input type="time">
+            </section>
+
+            <section>
+                Valmogo...<br>
+                <label>1. val: <input type="radio" name="val"></label>
+                <label>2. val: <input type="radio" name="val"></label>
+                <label>3. val: <input type="radio" name="val"></label>
+            </section>
+
+            <section>
+                Marga val<br>
+                <input type="checkbox"> 1. val.
+                <input type="checkbox"> 2. val.
+                <input type="checkbox"> 3. val.
+            </section>
+
+            <select required>
+                <option selected disabled>Select your favorite cuisine...</option>
+                <option>Italian</option>
+                <option>Japanese</option>
+                <option>Indian</option>
+                <option>Thai</option>
+                <option>French</option>
+            </select>
+
+            <section>
+                <textarea placeholder="Write a professional short bio..."></textarea>
+            </section>
+
+            <button type="submit" class="contrast">Senda</button>
+        </fieldset>
+    </form>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container grid ">
+        <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+ </section>
+         <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+ </section>
+         <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+ </section>
+    </div>
+    <p>@Mykola Kovtun</p>
+</footer>
+
+<!-- JS -->
+<script src="js/modal.js"></script>
+
+</body>
+</html>
