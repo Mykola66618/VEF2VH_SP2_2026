@@ -1,0 +1,116 @@
+/*tilkynning */
+.box {
+    font-size: 2rem;
+    font-style: italic;
+
+    background: white;  /* фон */
+    color: rgb(53, 20, 7);       /* текст */
+
+    overflow: hidden;
+    z-index: 9;
+}
+.box section{
+    margin: 0 ;
+    width: 800px; 
+}
+
+.kvikun{
+        position: absolute;
+        animation-name: tilkynning;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-delay: -3s;
+        z-index: 9;
+}
+
+@keyframes tilkynning {
+    from { left: 100%; }
+    to   { left: -100%; }
+}   
+
+
+
+.g2 {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+/* блок */
+.slide {
+    background: var(--pico-card-background-color);
+    color: var(--pico-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--pico-card-box-shadow);
+
+    min-height: 100%;
+    position: relative;
+}
+
+/* скрываем radio */
+input {
+    display: none;
+}
+
+/* контейнер текста */
+.texts {
+    position: relative;
+}
+
+/* тексты */
+.texts p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* активные */
+#g2s1:checked ~ .slide .t1 {
+    opacity: 1;
+    position: relative;
+}
+
+#g2s2:checked ~ .slide .t2 {
+    opacity: 1;
+    position: relative;
+}
+
+/* кнопки */
+.nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nav label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: var(--pico-muted-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav label:hover {
+    background: var(--pico-primary);
+    transform: scale(1.4);
+}
+
+/* базовый */
+.slide h3 {
+    color: var(--pico-color-orange-600, #942d0d);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+/* тёмная тема */
+[data-theme="dark"] .slide h3 {
+    color:var(--pico-h3-color);
+}

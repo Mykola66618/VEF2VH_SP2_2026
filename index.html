@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="css/table-from.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/kvikun.css">
+    <link rel="stylesheet" href="css/jpg.css">
+    <link rel="stylesheet" href="css/chatbox.css">
 
     <script>
         function toggleTheme() {
@@ -97,6 +100,9 @@
 
 <!-- HEADER -->
 <header>
+    <div class="box">
+        <section class="kvikun">bara i gad afsláttur a 50% </section>
+    </div>
     <picture>
         <img src="71e24e62d02da4a4a1e00ab30b257de8.jpeg" alt="mynd">
     </picture>
@@ -104,23 +110,44 @@
 
 <!-- MAIN -->
 <main class="container col-4">
+<article>
+    <h3>GEGN 1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+</article>
 
-    <!-- ARTICLES -->
-    <article>
-        <h3>GEGN 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
-    </article>
+<div class="CSSgal g2">
 
-    <article>
+    <!-- переключатели -->
+    <input type="radio" name="g2" id="g2s1" checked>
+    <input type="radio" name="g2" id="g2s2">
+
+    <div class="slide">
+
         <h3>GEGN 2</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
-    </article>
 
-    <article>
-        <h3>GEGN 3</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
-    </article>
+        <div class="texts">
+            <p class="t1">
+                1Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.
+            </p>
 
+            <p class="t2">
+                He who started in space will end up in space. Look and remember that if a person enters into nowhere, then everything is possible on Earth.
+        </div>
+
+        </div>
+
+        <!-- кнопки -->
+        <div class="nav">
+            <label for="g2s1"></label>
+            <label for="g2s2"></label>
+        </div>
+    </div>
+
+
+<article>
+    <h3>GEGN 3</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
+</article>
     <!-- ASIDE -->
     <aside>
         <ul>
@@ -130,6 +157,20 @@
         </ul>
     </aside>
 
+        <div id="slideset6">
+            <figure>
+                <img src="jpg/AdobeStock_204091485 (2).jpeg" alt="Drottinn er mef per">
+                <figcaption>"Drottinn hefur verif er mef per."</figcaption>
+            </figure>
+            <figure>
+                <img src="jpg/kcd2_ds_banner_1920x700_2.jpg" alt="Ha">
+                <figcaption>"Im hongry "</figcaption>
+            </figure>
+            <figure>
+                <img src="jpg/michelangel-touching-the-hand-of-god.jpg" alt="Drottinn er mef per">
+                <figcaption>"touch"</figcaption>
+            </figure>
+        </div>
     <!-- TABLE -->
     <fieldset class="col-2">
         <section>
@@ -263,12 +304,33 @@
     </div>
     <p>@Mykola Kovtun</p>
 </footer>
+ <section class="chatbox">
+    <input type="checkbox" id="check">
 
+    <label for="check">
+        <img src="logos/bubble-chat.png" alt="chat">
+    </label>
+
+    <div class="chat-content">
+        <p>Hvernig get ég aðstoðað þig?</p>
+
+        <form action="#" method="get">
+            <textarea placeholder="Skrifaðu skilaboð..." rows="5"></textarea>
+
+            <div><input type="text" name="name" required placeholder="Nafn"></div>
+            <div><input type="email" name="email" required placeholder="Tölvupóstfang"></div>
+
+            <button type="submit" class="animate__shakeX">
+                Senda skilaboð
+            </button>
+        </form>
+    </div>
+</section>
 <!-- JS -->
 <script src="js/modal.js"></script>
 
 <form action="admin.html" method="get">
-    <label 
+    <label></label>
 </form>
 </body>
 </html>

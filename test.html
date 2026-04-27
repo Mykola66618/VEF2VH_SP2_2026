@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+.kvikun {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+
+.tilkynning {
+  width: 100px;
+  height: 50px;
+  background-color: rgba(27, 5, 76, 0.897);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation-name: tilkynning;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+
+@keyframes tilkynning {
+    from {
+        right: -100px;
+
+    }
+    to {
+        right: 1600px;
+    }
+}   
+
+</style>
+    <div class="tilkynning">Kyning</div>
+    <div class="kvikun"></div>
+</body>
+</html>

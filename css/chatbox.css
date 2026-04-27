@@ -1,0 +1,67 @@
+
+#check {
+    display: none;
+}
+
+/* КНОПКА */
+.chatbox label {
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pico-primary);
+    border-radius: 50%;
+    cursor: pointer;
+
+    box-shadow: var(--pico-card-box-shadow);
+    overflow: hidden;
+
+    z-index: 999;
+    transition: 0.3s;
+}
+
+/* картинка */
+.chatbox label img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+}
+
+/* hover */
+.chatbox label:hover {
+    transform: scale(1.1);
+    background: red; /* если хочешь эффект */
+}
+
+/* ОКНО ЧАТА */
+.chat-content {
+    position: fixed;
+    right: -22rem;
+    bottom: 5rem;
+
+    width: 20rem;
+    height: 26rem;
+
+    border: 1px solid #ccc;
+    padding: 1rem;
+
+    background: var(--pico-card-background-color);
+    color: var(--pico-color);
+
+    border-radius: 0.6rem;
+    transition: 0.3s ease-in-out;
+
+    z-index: 998;
+}
+
+/* ОТКРЫТИЕ */
+#check:checked ~ .chat-content {
+    right: 1rem;
+}
