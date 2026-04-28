@@ -287,8 +287,8 @@
 <footer>
     <div class="container grid ">
         <section>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga sint ducimus illo facilis architecto iure excepturi explicabo soluta atque incidunt sequi molestiae quod nisi debitis est a qui.</p>
- </section>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.58519668216!2d-0.26640515952404525!3d51.52852620095037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2z0JvQvtC90LTQvtC9LCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sis!4v1777381670398!5m2!1sru!2sis" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
          <section>
                 <ul>
                 <li><a href="#.pdf">PDF Document</a></li>
@@ -314,15 +314,22 @@
     <div class="chat-content">
         <p>Hvernig get ég aðstoðað þig?</p>
 
-        <form action="#" method="get">
+        <form action="#" method="get" class="chat-form">
+
             <textarea placeholder="Skrifaðu skilaboð..." rows="5"></textarea>
 
-            <div><input type="text" name="name" required placeholder="Nafn"></div>
-            <div><input type="email" name="email" required placeholder="Tölvupóstfang"></div>
+            <div class="field">
+                <input type="text" name="name" required placeholder="Nafn">
+            </div>
 
-            <button type="submit" class="animate__shakeX">
+            <div class="field">
+                <input type="email" name="email" required placeholder="Tölvupóstfang">
+            </div>
+
+            <button type="submit">
                 Senda skilaboð
             </button>
+
         </form>
     </div>
 </section>

@@ -1,10 +1,8 @@
 footer {
     background-color: var(--pico-color-orange-200);
-    color: var(--pico-color-orange-50);
-    border-top: 2px solid var(--pico-color-orange);
+    color: var(--pico-color-orange-800); /* темнее текст */
+    border-top: 2px solid var(--pico-color-orange-500);
     padding: 1rem;
     text-align: center;
 }
-article h3 {
-    color:var(--pico-color-orange-650)
-}
+

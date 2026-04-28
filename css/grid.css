@@ -1,7 +1,9 @@
-.infa{
+/* ===== TEXT ===== */
+.infa {
     text-align: center;
 }
 
+/* ===== HEADER ===== */
 header picture {
     display: block;
     width: 100%;
@@ -11,42 +13,41 @@ header img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover; 
-    max-height: 400px; 
+    max-height: 400px;
+    object-fit: cover; /* если не нужно обрезание — убери эту строку */
 }
 
-/* ===== GRID ===== */
-.col-2, .col-4 , .col-41 {
+/* ===== GRID BASE ===== */
+.col-2,
+.col-4,
+.col-41 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-@media only screen and (min-width: 786px) {
+/* ===== TABLET ===== */
+@media only screen and (min-width: 768px) {
     .col-4 {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
+
+    .col-41 {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
+/* ===== DESKTOP ===== */
 @media only screen and (min-width: 960px) {
     .col-4 {
         grid-template-columns: repeat(4, 1fr);
     }
-    .col-41{
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
-
+/* ===== BOTTOM LAYOUT ===== */
 .bottom-layout {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-}
-
-@media only screen and (min-width: 786px) {
-    .col-4 .col-2 .col-41{
-        grid-column: span 2;
-    }
 }

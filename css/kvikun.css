@@ -1,33 +1,33 @@
-/*tilkynning */
 .box {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    color: rgb(53, 20, 7);
     font-size: 2rem;
     font-style: italic;
-
-    background: white;  /* фон */
-    color: rgb(53, 20, 7);       /* текст */
-
-    overflow: hidden;
-    z-index: 9;
-}
-.box section{
-    margin: 0 ;
-    width: 800px; 
 }
 
-.kvikun{
-        position: absolute;
-        animation-name: tilkynning;
-        animation-duration: 15s;
-        animation-iteration-count: infinite;
-        animation-delay: -3s;
-        z-index: 9;
+.box section {
+    display: inline-block;
+    white-space: nowrap;
 }
 
+.kvikun {
+    display: inline-block;
+    white-space: nowrap;
+
+    animation: tilkynning 15s linear infinite;
+}
+
+/* 🔥 главное изменение */
 @keyframes tilkynning {
-    from { left: 100%; }
-    to   { left: -100%; }
-}   
-
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 
 .g2 {
